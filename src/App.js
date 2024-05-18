@@ -57,7 +57,7 @@ export default function App() {
   return (
     <>
       <Router>
-        <Navbar title="DEV Sarkar" mode={mode} toggleMode={toggleMode} />
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Routes>
           <Route path="/" element={<TextForm title="Enter Your Text" mode={mode} showAlert={showAlert} />} />

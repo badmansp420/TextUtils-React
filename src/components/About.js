@@ -38,7 +38,7 @@ export default function About(props) {
 
     return (
         <>
-            <div className='container p-1' style={mode}>
+            <div className='container p-1 mt-4' style={mode}>
 
                 <div className="header d-flex justify-content-between p-2 mb-2 bg-secondary">
                     <h3 className="title">{props.title}</h3>
