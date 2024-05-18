@@ -61,7 +61,7 @@ export default function App() {
         <Alert alert={alert} />
         <Routes>
           <Route path="/" element={<TextForm title="Enter Your Text" mode={mode} showAlert={showAlert} />} />
-          <Route path="/about" element={<About title="About Section" />}></Route>
+          <Route path="/about" element={<About title="About Section" mode={mode} />}></Route>
         </Routes>
       </Router>
 

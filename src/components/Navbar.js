@@ -9,8 +9,8 @@ export default function Navbar(props) {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-lg shadow border-bottom border-body bg-${window.localStorage.getItem("modde")}`}
-        data-bs-theme={`${window.localStorage.getItem("modde")}`}>
+      <nav className={`navbar navbar-expand-lg shadow border-bottom border-body bg-${props.mode}`}
+        data-bs-theme={`${props.mode}`}>
         <div className="container" >
           <Link className="navbar-brand" to="/">
             {props.title}
@@ -41,7 +41,8 @@ export default function Navbar(props) {
             </ul>
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckChecked" />
-              <label className={`form-check-label text-${window.localStorage.getItem("modde") === 'light' ? 'dark' : 'light'}`} htmlFor="flexSwitchCheckChecked">{props.mode === 'dark' ? "Light" : "Dark"}</label>
+              <label className={`form-check-label text-${props.mode === 'light' ? 'dark' : 'light'}`} htmlFor="flexSwitchCheckChecked">{props.mode === 'dark' ? "Light" : "Dark"}</label>
+              {/* <label className={`form-check-label text-${window.localStorage.getItem("modde") === 'light' ? 'dark' : 'light'}`} htmlFor="flexSwitchCheckChecked">{props.mode === 'dark' ? "Light" : "Dark"}</label> */}
             </div>
           </div>
 

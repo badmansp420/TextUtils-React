@@ -38,20 +38,15 @@ export default function About(props) {
 
     return (
         <>
-            <div className='container p-1 mt-4' style={mode}>
+            <div className={`container p-1 mt-4`} style={{ backgroundColor: props.mode === 'dark' ? '#0d1321' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }}>
 
                 <div className="header d-flex justify-content-between p-2 mb-2 bg-secondary">
                     <h3 className="title">{props.title}</h3>
-                    {/* <button onClick={toggleMode} className="btn btn-sm btn-primary">{btnText}</button> */}
-                    <div className="form-check form-switch">
-                        <input className="form-check-input" onClick={toggleMode} type="checkbox" role="switch" id="modeSwitch" />
-                        <label className="form-check-label" htmlFor="modeSwitch">{btnText.text}</label>
-                    </div>
                 </div>
                 <div className="accordion" id="accordionExample" >
-                    <div className="accordion-item" style={mode}>
+                    <div className="accordion-item" style={{ backgroundColor: props.mode === 'dark' ? 'rgb(64 77 106)' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }}>
                         <h2 className="accordion-header" >
-                            <button className="accordion-button" style={mode} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{ backgroundColor: props.mode === 'dark' ? 'rgb(64 77 106)' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }}>
                                 Accordion Item #1
                             </button>
                         </h2>
@@ -61,9 +56,9 @@ export default function About(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="accordion-item" style={mode}>
+                    <div className="accordion-item" style={{ backgroundColor: props.mode === 'dark' ? 'rgb(64 77 106)' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }} >
                         <h2 className="accordion-header">
-                            <button className="accordion-button collapsed" style={mode} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{ backgroundColor: props.mode === 'dark' ? 'rgb(64 77 106)' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }}>
                                 Accordion Item #2
                             </button>
                         </h2>
@@ -73,9 +68,9 @@ export default function About(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="accordion-item" style={mode}>
+                    <div className="accordion-item" style={{ backgroundColor: props.mode === 'dark' ? 'rgb(64 77 106)' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }} >
                         <h2 className="accordion-header">
-                            <button className="accordion-button collapsed" style={mode} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={{ backgroundColor: props.mode === 'dark' ? 'rgb(64 77 106)' : '#ffffff', color: props.mode === 'light' ? '#0d1321' : '#ffffff' }}>
                                 Accordion Item #3
                             </button>
                         </h2>

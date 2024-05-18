@@ -97,11 +97,11 @@ export default function TextForm(props) {
         </div> */}
         {/* End Alert Section */}
         <div className="card text-start" data-bs-theme={`${props.mode === 'light' ? 'light' : 'dark'}`}>
-          <div className="card-header d-flex flex-wrap gap-2 ">
+          <div className="card-header d-flex flex-wrap gap-2">
             {/* buttons for text editor */}
 
             {/* delete button */}
-            <button id="clear" className="btn btn-sm btn-outline-danger" title="Delete Text" onClick={handelClearText}>
+            <button id="clear" className="btn btn-sm btn-outline-danger" title="Delete Text" onClick={handelClearText} >
               <span className="material-symbols-outlined">delete </span>
             </button>
 
@@ -171,7 +171,7 @@ export default function TextForm(props) {
       <div className="container">
         <h3>Your Text Summary</h3>
         <h6>
-          {text.split(" ").length} Words and {text.length} Characters
+          {text.split(" ").filter((e) => { return e.length !== 0 }).length} Words and {text.length} Characters
         </h6>
         <p>{0.008 * text.split(" ").length} Minutes Read time</p>
 
